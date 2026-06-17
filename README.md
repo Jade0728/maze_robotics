@@ -1,4 +1,4 @@
-# Hand Gesture Maze Robot Game
+# Hand Gesture Maze Robot
 
 사용자의 손동작을 실시간으로 인식하고, ROS2 토픽 통신을 통해 TurtleBot을 제어하여 Gazebo 미로를 탈출하는 로봇 프로젝트입니다.
 
