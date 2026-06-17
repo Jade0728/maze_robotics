@@ -1,0 +1,11 @@
+robot_driver_node:
+  ros_parameters:
+    robot_command_topic: "/robot_command"
+    cmd_vel_topic: "/cmd_vel"
+
+    max_linear_x: 0.5
+    max_angular_z: 1.0
+
+    command_timeout: 0.7
+    publish_rate: 10.0
+
