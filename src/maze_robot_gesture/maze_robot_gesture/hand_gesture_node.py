@@ -58,6 +58,8 @@ class HandGestureNode(Node):
             self.get_logger().warn('Failed to read frame from camera.')
             return
 
+        frame = cv2.flip(frame, 1) # 좌우반전
+
         # OpenCV는 BGR, MediaPipe는 RGB 사용
         # frame = cv2.flip(frame, 1) #좌우 반전
         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -166,7 +168,7 @@ class HandGestureNode(Node):
         index_extended=dist(index_tip, index_mcp)>dist(index_pip, index_mcp) * 1.2
 
         # 검지가 수평방향인지
-        index_horizontal=abs(dx)>abs(dy)*1.1
+        index_horizontal=abs(dx)>abs(dy)*0.8
 
         # 손 크기에 따른 동적 threshold
         direction_threshold=hand_size*0.25
@@ -180,7 +182,8 @@ class HandGestureNode(Node):
         ring_folded = ring_tip.y > ring_pip.y
         pinky_folded = pinky_tip.y > pinky_pip.y
 
-        other_fingers_folded = middle_folded and ring_folded and pinky_folded
+        folded_count = sum([middle_folded, ring_folded, pinky_folded])
+        other_fingers_folded = folded_count >= 2
 
         if index_extended and index_horizontal and other_fingers_folded:
             if index_horizontal_left:
