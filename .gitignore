@@ -1,0 +1,32 @@
+
+# ROS2 build outputs
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# ROS bag files
+*.bag
+*.db3
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+*.secret
+
+
