@@ -21,6 +21,10 @@ Hand Gesture Node
 - Gazebo 미로 환경 구성
 - TurtleBot3 Burger 시뮬레이션 주행
 
+## Demo
+youtube demo: https://www.youtube.com/watch?v=ViuENF6v88c
+발표 demo: 
+
 ## RUN, LAUNCH, 웹캠 연결
 Node, Gazebo, TurtleBot run, launch
 ```
