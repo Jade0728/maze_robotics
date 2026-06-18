@@ -21,6 +21,23 @@ Hand Gesture Node
 - Gazebo 미로 환경 구성
 - TurtleBot3 Burger 시뮬레이션 주행
 
+## RUN, LAUNCH, 웹캠 연결
+Node, Gazebo, TurtleBot run, launch
+```
+source install/setup.bash
+ros2 run maze_robot_gesture manual_gesture_publisher
+ros2 run maze_robot_gesture hand_gesture_node
+ros2 run maze_robot_control gesture_to_cmd
+ros2 run maze_robot_driver robot_driver_node
+ros2 launch maze_robot_gazebo gazebo.launch.py
+ros2 launch maze_robot_sim spawn_turtlebot.launch.py
+```
+웹캠 연결: 노트북 환경에 따라 연결 방법이 다를 수 있음, powershell 을 통해 연결
+```
+usbipd bind --busid 1-6
+usbipd attach --wsl --busid 1-6
+```
+
 ## Project Structure
 
 ```text
