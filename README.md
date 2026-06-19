@@ -22,8 +22,9 @@ Hand Gesture Node
 - TurtleBot3 Burger 시뮬레이션 주행
 
 ## Demo
-youtube demo: https://www.youtube.com/watch?v=hxPcinToeVA
-발표 demo: 
+시연 demo: https://www.youtube.com/watch?v=hxPcinToeVA
+
+최종 발표 영상: https://youtu.be/56nJ2ujIl3c 
 
 ## RUN, LAUNCH, 웹캠 연결
 Node, Gazebo, TurtleBot run, launch
